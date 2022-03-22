@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="outWave">
+    <h3>Demander une démonstration</h3>
+    <!--page de demande de démonstration, renvoyez sur un formulaire pour prise de rdv-->
+    <hr>
+    <div class="divSecurity">
+        <p>Choisissez une date qui vous convient : </p>
+        <div>
+            <input type="datetime-local" min="2022-05-02T06:00" name="demo" id="demo" required>
+        </div>
+        <br>
+        <p>Pour confirmer votre choix, rendez-vous à la prochaine étape 
+            <button class="btnAssist btn btn-success"><a href="">Suivant</a></button>
+        </p>
+    </div>
+</div>
+{% endblock body %}

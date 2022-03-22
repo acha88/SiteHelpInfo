@@ -1,0 +1,95 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<section class="bg-foncer">
+    <!--Paragraphe de présentation du site web-->
+    <!--partie info logiciel-->
+    <div class="content">
+        <section class="sectionGrosTitre">
+            <div class="grosTitre">
+                <h1>Un logiciel de gestion de temps de travail complet, qui s'adapte à l'ensemble de vos besoins</h1>
+                <p>Créé par la collaboration entre des profesionnels du médico-social et du développement informatique, GET-MS est une solution qui correspond aux besoins réels des établissements car il est pensé PAR et POUR les utilisateurs.</p>
+            </div>
+            <img class="imgGrosTitre" src="{{asset('images/collab.jpg')}}" alt="">
+        </section>
+        <p class="paraMaintenance">Forte de 22ans d'expérience dans le domaine de la gestion du temps de travail, <span> Help Info</span> avance avec la volonté d'offrir un logiciel parmi les plus complet du marché, personnalisable selon vos besoins, ainsi qu'un accompagnement durable basé sur<span> la disponibilité, la compétence et la confiance.</span></p>
+</section>
+<section id="getMS-MS" class="outWave">
+    <hr class="hrArticle">
+    <div class="content">
+        <h2>GET-MS, La Solution de gestion de temps de travail.</h2>
+        <h6 class="paraMaintenance">Terminé les fichiers Excel ; des centaines d'entreprises utilisent déjà GET-MS au quotidien pour gérer les agents, les plannings, les congés et les différents compteurs de leur établissements.</h6>
+        <ul class="ulAssist">
+            <div class="divRow">
+                <img class="imgAssist" src="{{ asset('images/imgun.png') }}" alt="">
+                <li class="liAssist"><span>Un suivi clair et rapide</span> Grâce aux outils de suivi individuels ou collectifs, il est possible d'afficher les plannnings journaliers, hebdomadaires ou mensuels et de visualiser les activités de vos agents. <br> <button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
+            </div>
+            <div class="divRow">
+                <li class="liAssist"><span>Un gain de temps au quotidien :</span> GET-MS permet de façon automatisée les tâches répétitives, de signaler les erreurs de saisies et d'accompagner l'utilisateur dans sa gestion quotidienne. <br><button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
+                <img class="imgAssist" src="{{ asset('images/imgdeux.png') }}" alt="">  
+            </div>
+            <div class="divRow">
+                <img class="imgAssist" src="{{ asset('images/imgtrois.png') }}" alt="">
+                <li class="liAssist"><span>Un paramétrage sur mesure : </span> La solution GET-MS s'adapte aux besoins de l'utilisateur et non l'inverse. Des paramètres personnalisés à votre organisation, selon votre convention et ce pour chaque établissement. <br><button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
+            </div>
+        </ul>
+    </div>
+</section>
+<!--partie maintenance-->
+<section id="maintenance" class="bg-foncer">
+    <hr class="hrArticle">
+    <div class="content">
+        <h3>Maintenance</h3>
+        <p class="paraMaintenance">Fréquemment, les structures de taille modeste ne peuvent disposer d'un administrateur capable de maintenir les serveurs, d'effectuer les mises à jour des systèmes et des applications, de modifier les droits d'accès ou simplement d'assister les utilisateurs dans l'utilisation dans la manipulation quotidienne de l'outil informatique. C'est pourquoi nous proposons une télémaintenance comprenant :</p>
+        <ul class="ulAssist">
+            <div class="divRow">
+                <img class="imgAssist" src="{{ asset('images/assistance2-0.jpg') }}" alt="">
+                <div class="divColumn">
+                    <li class="liColumn">Une <span>Maintenance préventive</span> mensuelle de votre serveur, afin de vérifier les sauvegardes, l'antivirus, les disques...</li>
+                    <li class="liColumn">Une <span>Maintenance corrective</span> en cas d'incident logiciel et matériel. La maintenance curative intervient à votre demande, immédiatement à partir de votre appel téléphonique ou sur rendez-vous selon votre besoin.</li>
+                    <li class="liColumn">Une <span>Maintenance évolutive</span> qui consiste à faire évoluer GET-MS, selon les retours des utilisateurs finaux, pour proposer de nouvelles fonctions ou optimiser l'existant selons vos besoins.</li>
+                </div>
+            </div>
+        </ul>
+        <br>
+    </div>
+</section>
+<!--partie assistance-->
+<section id="assistance" class="outWave">
+    <hr class="hrArticle">
+    <div class="content">
+        <h3>Assistance</h3>
+        <ul class="ulAssist">
+            <div class="divRow">
+                <li class="liAssist"><span>L'assistance avec prise en mains à distance</span> est un complément de la maintenance serveur. Elle permet aux utilisateurs de solliciter par téléphone ou par mail, la maintenance pour résoudre les dysfonctionnements du poste. Pas de ticket d'attente, vous avez une adresse mail ainsi qu'une ligne directe vers nos locaux.<button class="btnMooc btn"> <a class="aMooc" href="/site/#assistance">En savoir plus</a></button></li>
+                <img class="imgAssist" src="{{ asset('images/assistance1-1.jpg') }}" alt=""> 
+            </div>
+        </ul>
+    </div>
+</section>
+<!--Partie clients et partenaires-->
+<section id="client">
+    <hr class="hrArticle">
+    <h3>Il nous ont fait confiance</h3>
+    <div class="divClient">
+        <div class="cardClient">
+            <img class="imgClient" src="{{asset('images/clients/Logo/adapei88Logo.jpg')}}" alt="adapai88">
+        </div>
+        <div class="cardClient">
+            <img class="imgClient" src="{{asset('images/clients/Logo/aeim54Logo.png')}}" alt="aeim54">
+        </div>
+        <div class="cardClient">
+            <img class="imgClient" src="{{asset('images/clients/Logo/cmseaLogo.png')}}" alt="cmsea">
+        </div>
+        <div class="cardClient">
+            <img class="imgClient" src="{{asset('images/clients/Logo/envieLogo.png')}}" alt="envie">
+        </div>
+        <div class="cardClient">
+            <img class="imgClient" src="{{asset('images/clients/Logo/lespapillonsblancsLogo.jpg')}}" alt="pbsel">
+        </div>
+        <div class="cardClient">
+            <img class="imgClient" src="{{asset('images/clients/Logo/ysosLogo.jpg')}}" alt="ysos">
+        </div>   
+    </div>
+</section>
+{% endblock body %}

@@ -1,0 +1,110 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<!--Partie formation avec plusieurs parties (informations, questionnaire de réussite puis envoie d'un mail d'encouragement et un badge)--> 
+{% if not app.user %}
+<div class="outWave">
+    <h3>Découvrir Get-MS</h3>
+    <section class="SectionMoocRow">
+        <div class="moocCard">
+                <img class="smallLogo" src="{{asset('images/logoHelpInfoArrondi.png')}}" alt="logo">
+                <h2>Get-MS</h2>
+                <p>Gestion des plannings</p>
+        </div>
+        <div class="moocCard">
+            <h5>La formation :</h5>
+            <ul>
+                <li>8 personnes maximum</li>
+                <li>opérationelle</li>
+            </ul>
+        </div>
+    </section>
+</div>
+<div class="moocInfo">
+    <h5>Prérequis :</h5>
+    <ul>
+        <li>Etre familiarisé avec le droit social et la convention collective dans le cadre du temps de travail.</li>
+    </ul>
+    <hr class="hrMooc">
+    <h5>Objectif :</h5>
+    <ul>
+        <li>Utiliser le logiciel Get-MS au regard du droit social, de votre convention collective, de vos usages.</li>
+    </ul>
+    <hr class="hrMooc">
+    <h5>Durée :</h5>
+    <ul>
+        <li>1 jour soit 7 heures</li>
+    </ul>
+</div>
+<div class="mooc">
+    <h5>Profil du formateur :</h5>
+    <p>Formateur expert, il est pédagogue et certifier dans son domaine.</p>
+    <hr class="hrMooc">
+    <h5>Méthode pédagogique :</h5>
+    <p>La formation est constituée d'apports théorique et d'exercices expertises.</p>
+    <p>Chaque stagiaire possède un poste de travail.</p>
+    <hr class="hrMooc">
+    <h5>Suivi pédagogique :</h5>
+    <p>Un suivi de la formation est rédigé par une feuille de présence émargée par demie journée par les stagiaires et du formateur. Un questionnaire de satisfaction et une validation des acquis seront complétées par chaque stagiaire en fin de formation.</p>
+</div>
+<div class="moocPlan">
+    <h4 class="hPlan">Plan du cours</h4>
+    <ul>
+        <li class="liPlan">PRINCIPES ET PRESENTATION</li>
+        <li class="liPlan">RAPPEL DROIT SOCIAL</li>
+        <li class="liPlan">PLANIFIER :</li>
+            <ol class="liPlan">- Horaire Type et Matrice</ol>
+            <ol class="liPlan">- Attribuer un roulement</ol>
+            <ol class="liPlan">- Interprétation des compteurs</ol>
+        <br>
+        <li class="liPlan">GESTION AU QUOTIDIEN : </li>
+            <ol class="liPlan">- Journée Nationale de la Santé</ol>
+            <ol class="liPlan">- Repas</ol>
+            <ol class="liPlan">- Heures supp</ol>
+            <ol class="liPlan">- Congés, RTT, CESS</ol>
+            <ol class="liPlan">- Repos compensateur</ol>
+    </ul>
+</div>
+<section class="seFormer">
+    <h3>Commencer votre formation</h3>
+    <div class="formation">
+        <button type="button" class="btnMooc btn btn-outline-light">
+            <a class="aMooc" href="{{path('security_registration')}}">S'inscrire</a>
+        </button>
+        <p>ou</p>
+        <button type="button" class="btnMooc btn btn-outline-light">
+            <a class="aMooc" href="{{path('security_login')}}">Se connecter</a>
+        </button>
+    </div>
+</section>
+{% else %}
+<section class="outWave">
+    <h3>Bienvenue <span class="user">{{app.user.username}}</span> à votre espace de formation</h3>
+    <div class="planning content">
+        <article class="cours">
+            <h3>Titre</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate soluta velit ad fuga, rem itaque dolorem earum placeat repudiandae! Non tempore laboriosam fugiat eligendi repudiandae aliquam nobis quibusdam, quia officia ipsam pariatur eius eum cumque molestiae quae iusto facilis debitis sunt minus, ducimus veritatis ut! Voluptatum deserunt pariatur debitis deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est earum nisi ratione cupiditate temporibus sapiente eos maiores asperiores dolore sunt quibusdam, rerum neque, omnis numquam voluptate nam reiciendis quod ducimus voluptates accusamus deserunt magni ipsum iure! Fugiat adipisci ad iste laudantium soluta esse itaque dolores consequuntur ex odio! Nobis.</p>
+            <img class="imgCours" src="https://via.placeholder.com/600x300" alt="">
+        </article>
+        <hr class="hrArticle">
+        <article class="cours">
+            <h3>Titre</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate soluta velit ad fuga, rem itaque dolorem earum placeat repudiandae! Non tempore laboriosam fugiat eligendi repudiandae aliquam nobis quibusdam, quia officia ipsam pariatur eius eum cumque molestiae quae iusto facilis debitis sunt minus, ducimus veritatis ut! Voluptatum deserunt pariatur debitis deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est earum nisi ratione cupiditate temporibus sapiente eos maiores asperiores dolore sunt quibusdam, rerum neque, omnis numquam voluptate nam reiciendis quod ducimus voluptates accusamus deserunt magni ipsum iure! Fugiat adipisci ad iste laudantium soluta esse itaque dolores consequuntur ex odio! Nobis.</p>
+        </article>
+        <hr class="hrArticle">
+        <article class="cours">
+            <h3>Titre</h3>
+            <img class="imgCours" src="https://via.placeholder.com/600x300" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate soluta velit ad fuga, rem itaque dolorem earum placeat repudiandae! Non tempore laboriosam fugiat eligendi repudiandae aliquam nobis quibusdam, quia officia ipsam pariatur eius eum cumque molestiae quae iusto facilis debitis sunt minus, ducimus veritatis ut! Voluptatum deserunt pariatur debitis deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est earum nisi ratione cupiditate temporibus sapiente eos maiores asperiores dolore sunt quibusdam, rerum neque, omnis numquam voluptate nam reiciendis quod ducimus voluptates accusamus deserunt magni ipsum iure! Fugiat adipisci ad iste laudantium soluta esse itaque dolores consequuntur ex odio! Nobis.</p>
+        </article>
+        <hr class="hrArticle">
+        <article class="cours4">
+            <h3>Titre</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate soluta velit ad fuga, rem itaque dolorem earum placeat repudiandae! Non tempore laboriosam fugiat eligendi repudiandae aliquam nobis quibusdam, quia officia ipsam pariatur eius eum cumque molestiae quae iusto facilis debitis sunt minus, ducimus veritatis ut! Voluptatum deserunt pariatur debitis deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est earum nisi ratione cupiditate temporibus sapiente eos maiores asperiores dolore sunt quibusdam, rerum neque, omnis numquam voluptate nam reiciendis quod ducimus voluptates accusamus deserunt magni ipsum iure! Fugiat adipisci ad iste laudantium soluta esse itaque dolores consequuntur ex odio! Nobis.</p>
+        </article>
+        <hr class="hrArticle">
+    </div>
+</section>
+{% endif %}
+</section>
+{% endblock body %}

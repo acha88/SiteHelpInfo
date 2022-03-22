@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="outWave">
+        <h3 id="solution">Solutions GET-MS</h3>
+        <!--partie solution GET-MS-->
+        <!--articles des solutions en BDD-->
+        <section id="i" class="articles">
+            {% for article in article %}
+                <article id="{{article.id}}">
+                    <div class="divRow">
+                        <img class="imgArticle" src="{{ asset(article.image) }}" alt="image">
+                        <div class="metadata">
+                            <h4>{{ article.titlearticle }}</h4>
+                            <div class="contentArticle">{{ article.contenu | raw }}</div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="hrArticle">
+                </article>
+            {% endfor %}
+        </section>
+    </div>
+{% endblock body %}

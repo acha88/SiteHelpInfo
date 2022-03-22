@@ -1,0 +1,364 @@
+/* RESET & BALISE HTML SIMPLE */
+* {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #000;
+}
+a,
+li {
+    text-decoration: none !important;
+    list-style-type: none !important;
+}
+h2,
+h3 {
+    margin-top: 2%;
+    text-align: center;
+}
+h4,
+h5 {
+    margin: 2% 0;
+    text-decoration: underline 1px #7b8ac6;
+}
+span {
+    font-weight: bold;
+}
+footer {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+/* MENU */
+#logo {
+    height: 90px;
+    width: 90px;
+    margin: 0 10vh;
+}
+#navId {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: -7%;
+    box-shadow: -2em 1px rgba(0, 0, 255, .2);
+}
+/* MENU DEROULANT */
+#containerMenu {
+    background-color: #f0f5fa;
+    height: 70px;
+    position: relative;
+    text-decoration: none;
+    margin: 0 2%;
+}
+#menu {
+    position: absolute;
+}
+
+dl {
+    height: 70px;
+    display: block;
+    float: left;
+}
+dt {
+    width: 250px;
+    display: block;
+    height: 70px;
+    color: #7b8ac6;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+dd {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5fa;
+}
+dd ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+dd ul li {
+    display: block;
+}
+dd li a {
+    display: block;
+    color: #485785;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: dotted 1px #000;
+}
+dd ul li a:hover {
+    background-color: #7b8ac6;
+    color: #000;
+}
+dl dd {
+    display: none;
+}
+dl:hover dd {
+    display: block;
+}
+/* DIV SUR TOUTES LES PAGES */
+.outWave,
+.bg-foncer {
+    margin: 7% 0;
+    text-align: justify;
+    padding: 2%;
+}
+.outWave {
+    width: 100%;
+    background-color: #f0f5fa;
+    margin-bottom: 7%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 2% 5%;
+    width: 85%;
+}
+.ulAssist {
+    margin: 2% 10%;
+    width: 80%;
+}
+.divRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+.hrArticle {
+    border: #485785 1px solid;
+    width: auto;
+}
+.liAssist {
+    margin: 5%;
+}
+.imgAssist {
+    width: 500px;
+    height: 300px;
+}
+.btnMooc {
+    margin: 3% 35%;
+}
+.paraMaintenance {
+    margin: 5%;
+}
+.imgArticle,
+.imgAssist,
+.imgGrosTitre {
+    border-radius: 5px;
+    box-shadow: #aaa 8px 8px 10px;
+}
+/* HOME */
+/* SECTION GROS TITRE */
+.sectionGrosTitre {
+    display: flex;
+    flex-direction: row;
+}
+.grosTitre {
+    width: 30%;
+    margin: 0 10%;
+}
+.imgGrosTitre {
+    opacity: 60%
+}
+/* SECTION GET-MS */
+
+/* SECTION MAINTENANCE */
+.divColumn {
+    margin: 3%;
+}
+.liColumn {
+    margin-bottom: 2%;
+}
+/* SECTION CLIENT */
+.client {
+    width: 100%;
+}
+.divClient {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: 5%;
+}
+.cardClient {
+    width: 300px;
+    height: 200px;
+    border: #000 1px solid;
+    border-radius: 5px;
+    background-color: #f0f5fa;
+    padding: 1%;
+    margin: 1%;
+}
+.imgClient {
+    margin-top: 10%;
+    align-items: center;
+}
+/* PAGE SOLUTION GET-MS */
+.articles {
+    margin: 10%;
+    text-align: center;
+    width: 80%;
+}
+.metadata {
+    width: 80%;
+    align-items: center;
+    padding: 1%;
+}
+.contentArticle {
+    margin-top: 5%;
+    margin-left: 7%;
+    text-align: justify;
+}
+.imgArticle {
+    width: auto;
+    height: auto;
+    max-width: 950px;
+    max-height: 600px;
+}
+/* ASSISTANCE */
+.sectionAssistance {
+    display: flex;
+    flex-direction: row;
+}
+.cardAssistance {
+    margin: 5%;
+    width: 40%;
+    text-align: center;
+}
+.btnAssistance {
+    padding: 2%;
+}
+.aAssistance {
+    text-decoration: none;
+}
+#spanAssist {
+    border-radius: 10%;
+    background-color: #7b8ac6;
+    color: #f0f5fa;
+    padding: 5%;
+}
+#spanAssist:hover {
+    background-color: #f03f3f;
+}
+#spanAssist:active {
+    background-color: #71d110;
+}
+
+/* FORMATION */
+.smallLogo {
+    width: 40px;
+    height: 40px;
+}
+.SectionMoocRow {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 25%;
+    width: 50%;
+}
+.moocCard {
+    width: 300px;
+    height: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    border: #7b8ac6 1px inset;
+    padding: 3%;
+    word-wrap: break-word;
+}
+.moocInfo {
+    margin: 2% 37%;
+    width: 500px;
+    height: auto;
+    border: #7b8ac6 1px inset;
+    padding: 2%;
+}
+.hrMooc {
+    border: 0.2px #7b8ac69d solid;
+}
+
+.hPlan {
+    color: #f0f5fa;
+}
+.mooc {
+    width: 50%;
+    height: auto;
+    margin: 2% 5%;
+    text-align: justify;
+    padding: 2%;
+}
+.moocPlan {
+    background-color: #7b8ac6;
+    color: #f0f5fa;
+    width: 50%;
+    height: auto;
+    margin: 0 5%;
+    padding: 2%;
+    box-shadow: #aaa 10px 10px 5px;
+}
+.seFormer {
+    background-color: #f0f5fa;
+    width: 90%;
+    margin: 5%;
+    border-radius: 10px;
+    padding: 1%;
+}
+.formation {
+    margin: 3% 27%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+/* FORMATION ETANT CONNECTER */
+.user {
+    font-size: 32px;
+    font-weight: bold;
+}
+.cours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LOGIN, REGISTRATION, LOGOUT */
+.divSecurity {
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+}
+.name {
+    margin: 2%;
+}
+.mail {
+    margin: 2%;
+}
+.password {
+    margin: 2%;
+}
+label {
+    margin: 0 3%;
+    padding: 1%;
+}
+.btnLog {
+    margin: 2% 30% -5% 30%;
+}
+/* FOOTER */
+.contact {
+    margin: 0 5%;
+    width: 30%;
+}
+.hour {
+    margin: 0 5%;
+    width: 30%;
+}
+.qualiopi {
+    margin: 0 -25%;
+}
+.reseauSocial {
+    margin: 0 5%;
+    width: 30%;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGUuY3NzIiwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksU0FBUztJQUNULFVBQVU7SUFDVixnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLGVBQWU7SUFDZixVQUFVO0lBQ1YsV0FBVztBQUNmO0FBQ0E7SUFDSSxZQUFZO0lBQ1osbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixXQUFXO0FBQ2Y7QUFDQTtJQUNJLFVBQVU7QUFDZDtBQUNBO0lBQ0ksVUFBVTtBQUNkO0FBQ0E7SUFDSSxVQUFVO0FBQ2Q7QUFDQSxlQUFlO0FBQ2Y7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxVQUFVO0lBQ1YsVUFBVTtJQUNWLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksV0FBVztBQUNmO0FBQ0E7SUFDSSxxQkFBcUI7QUFDekIsQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9zdHlsZXMvc3R5bGUuY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIG1hcmdpbi1ib3R0b206IDA7XHJcbn1cclxuI25hdklkIHtcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIHotaW5kZXg6IDE7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG4ub3V0V2F2ZSB7XHJcbiAgICBtYXJnaW46IDAgNSU7XHJcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xyXG59XHJcbmZvb3RlciB7XHJcbiAgICBtYXJnaW4tdG9wOiAtMjBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAgcGFkZGluZzogNSU7XHJcbn1cclxuLmNvbnRhY3Qge1xyXG4gICAgd2lkdGg6IDM1JTtcclxufVxyXG4uaG91ciB7XHJcbiAgICB3aWR0aDogMjUlO1xyXG59XHJcbi5yZXNlYXVTb2NpYWwge1xyXG4gICAgd2lkdGg6IDI1JTtcclxufVxyXG4vKiBBU1NJU1RBTkNFICovXHJcbi5zZWN0aW9uQXNzaXN0YW5jZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxufVxyXG4uY2FyZEFzc2lzdGFuY2Uge1xyXG4gICAgbWFyZ2luOiA1JTtcclxuICAgIHdpZHRoOiA0MCU7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmJ0bkFzc2lzdGFuY2Uge1xyXG4gICAgcGFkZGluZzogMSU7XHJcbn1cclxuLmFBc3Npc3RhbmNlIHtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufSJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
