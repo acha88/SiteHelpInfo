@@ -1,9 +1,5 @@
 {% extends "base.html.twig" %}
 {% block body %} 
-    <div class="inWave">
-        <!--vague du header, plusieurs vagues-->
-        <img class="wave" src="{{asset('images/wave2.svg')}}" alt="">
-    </div>
     <h3>Se connecter</h3>
     <!--formulaire de connexion-->
     <form action="{{ path('security_login') }}" class="divSecurity" method="post">
@@ -19,9 +15,4 @@
             <button type="submit" class="btnLog btn btn-success">Se connecter</button>
         </div>
     </form>
-
-    <!--vague du footer-->
-    <div class="inWave">
-        <img class="wave" src="{{asset('images/wave.svg')}}" alt="">
-    </div>
 {% endblock body %}

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use App\Entity\User;
@@ -29,9 +28,7 @@ class SecurityController extends AbstractController
             $manager->flush();
 
             return $this->redirectToRoute('security_login');
-            
         }
-
         return $this->render('security/registration.html.twig', [
             'form' => $form->createView()
         ]);

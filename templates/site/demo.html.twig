@@ -1,19 +1,80 @@
 {% extends "base.html.twig" %}
 
+
 {% block body %}
-<div class="outWave">
-    <h3>Demander une démonstration</h3>
-    <!--page de demande de démonstration, renvoyez sur un formulaire pour prise de rdv-->
-    <hr>
-    <div class="divSecurity">
-        <p>Choisissez une date qui vous convient : </p>
-        <div>
-            <input type="datetime-local" min="2022-05-02T06:00" name="demo" id="demo" required>
+<section class="outWave">
+    {% if not app.user %}
+    <section class="seFormer">
+        <h3>Demander une démo</h3>
+        <div class="formation">
+            <button type="button" class="btnMooc btn btn-outline-light">
+                <a class="aMooc" href="{{path('security_registration')}}">S'inscrire</a>
+            </button>
+            <p>ou</p>
+            <button type="button" class="btnMooc btn btn-outline-light">
+                <a class="aMooc" href="{{path('security_login')}}">Se connecter</a>
+            </button>
         </div>
-        <br>
-        <p>Pour confirmer votre choix, rendez-vous à la prochaine étape 
-            <button class="btnAssist btn btn-success"><a href="">Suivant</a></button>
-        </p>
-    </div>
+    </section>
+    {% else %}
+    <section class="outWave">
+      <h3>Choississez le créneau de votre choix</h3>
+      <div id="calendar"></div>
+      <section id="confirmation"></section>
+    </section>
+    {% endif %}
 </div>
 {% endblock body %}
+
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendar = document.getElementById('calendar');
+          
+            var calendar = new FullCalendar.Calendar(calendar, {
+                timeZone: 'UTC',
+                locale: 'fr-FR',
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridDay'
+                },
+                initialDate: '2022-05-02',
+                events: [
+                    {
+                        daysOfWeek: [ '3' ],
+                        title: 'Formation GET-MS',
+                        startTime: '09:00:00',
+                        endTime: '17:00:00',
+                        url: '{{path("demo")}}#confirmation'
+                    },
+                    {
+                        daysOfWeek: [ '5' ],
+                        title: 'Formation GET-MS',
+                        startTime: '09:00:00',
+                        endTime: '17:00:00',
+                        url: '{{path("demo")}}#confirmation'
+                    }
+                ],
+                eventClick: function(info) {
+                    var eventObj = info.event;
+                    var options= {
+                        day: '2-digit',
+                        month: 'long',
+                        year: 'numeric',
+                    };
+                    var fuseau= {
+                        timeZone: 'UTC',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    }
+                    info.jsEvent.preventDefault();
+                    confirmation.innerHTML = '<div class="cardInfoDemo"><h4>Votre sélection</h4><p>Votre formation : </p><div class="cardTitle">' + eventObj.title + '</div><div class="cardDate"><p>Se déroulera le : </p><div class="date">' + eventObj._instance.range.start.toLocaleDateString('fr-FR', options) + '</div><p> de </p><div class="heures">' + eventObj._instance.range.start.toLocaleTimeString('fr-FR', fuseau) + '</div><p class="p-heures">h</p>' + '</div><div class="cardDate"><p>à </p><div class="heures">'+ eventObj._instance.range.end.toLocaleTimeString('fr-FR', fuseau) + '</div><p class="p-heures">h</p>' + '</div><button type="submit" class="btn btnMooc btn-success">Valider</button></div>';
+                    
+                },
+            });
+            calendar.render();
+          });
+    </script>
+{% endblock %}

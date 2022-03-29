@@ -1,10 +1,6 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <div class="inWave">
-        <!--vague du header, plusieurs vagues-->
-        <img class="wave" src="{{asset('images/wave2.svg')}}" alt="">
-    </div>
     <h3>Inscription</h3>
     <!--formulaire d'inscription à la condition d'avoir un matricule reconnu en BDD (à créer)-->
     <div class="divSecurity">
@@ -21,8 +17,4 @@
         {{ form_rest(form) }}
             <button type="submit" class="btnLog btn btn-success">Valider</button>
     </div>    
-    <!--vague du footer-->
-    <div class="inWave">
-        <img class="wave" src="{{asset('images/wave.svg')}}" alt="">
-    </div>
 {% endblock body %}

@@ -39,7 +39,7 @@ footer {
 #navId {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     margin-top: -7%;
     box-shadow: -2em 1px rgba(0, 0, 255, .2);
 }
@@ -322,7 +322,44 @@ dl:hover dd {
     flex-direction: column;
     justify-content: center;
 }
+/* DEMO EN ETANT CONNECTER */
 
+#calendar {
+    z-index: -1;
+    display: flex;
+    width: 90%;
+    margin: 5% auto;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+#calendar button {
+    background-color: #7b8ac6;
+}
+.cardInfoDemo {
+    width: 40%;
+    margin: 0 30%;
+    background-color: #7b8ac6;
+    text-align: center;
+    padding: 1%;
+    box-shadow: #aaa 10px 10px 5px;
+}
+
+.cardDate {
+    padding: 1%;
+}
+#confirmation div {
+    font-weight: bold;
+    color: #f0f5fa !important;
+}
+.heures {
+    margin: 0 10% !important;
+}
+.p-heures {
+    margin-top: -4% !important;
+    margin: 0 30%;
+    width: 50%;
+}
 /* LOGIN, REGISTRATION, LOGOUT */
 .divSecurity {
     margin: 2%;
