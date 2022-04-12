@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <section class="seFormer">
+        <h3>Commencer votre formation</h3>
+        <div class="formation">
+            <button type="button" class="btnMooc btn btn-outline-light">
+                <a class="aMooc" href="{{path('security_registration')}}">S'inscrire</a>
+            </button>
+            <p>ou</p>
+            <button type="button" class="btnMooc btn btn-outline-light">
+                <a class="aMooc" href="{{path('security_login')}}">Se connecter</a>
+            </button>
+        </div>
+    </section>
+{% endblock body %}

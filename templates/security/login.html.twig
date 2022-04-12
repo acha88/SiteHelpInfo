@@ -1,18 +1,21 @@
 {% extends "base.html.twig" %}
 {% block body %} 
+<section class="bg-foncer">
     <h3>Se connecter</h3>
     <!--formulaire de connexion-->
-    <form action="{{ path('security_login') }}" class="divSecurity" method="post">
+    <form class="formLogin" action="{{ path('security_login') }}" class="divSecurity" method="post">
         <div>
             <label for="">Votre email :</label>
-            <input placeholder="Email" required name="_username" type="text" class="">
+            <input placeholder="exemple@exemple.com" required name="_username" type="text" class="inputLogin">
         </div>
         <div>
             <label for="">Votre mot de passe :</label>
-            <input placeholder="Mot de passe" required name="_password" type="password" class="">
+            <input placeholder="Mot de passe" required name="_password" type="password" class="inputLogin">
         </div>
         <div>
             <button type="submit" class="btnLog btn btn-success">Se connecter</button>
         </div>
     </form>
+</section>
+    
 {% endblock body %}

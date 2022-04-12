@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="fr">
+    <head>  
         <meta charset="UTF-8">
         <meta name="description" content="Help Info située sur Nancy, permet d'offrir un logiciel de gestion du temps de travail, personnalisable selon les besoins de l'utilisateur ainsi qu'un accompagnement durable basé sur la disponibilité, la compétence et la confiance.">
         <meta name="robots" content="noindex" />
@@ -69,14 +69,10 @@
                                 <dl class="nav-item">
                                     <dt class="nav-link"><a href="{{path('demo')}}">Demander une démo</a></dt>
                                     <dd>
-                                        {% if app.user %}
-                                        {# si l'utilisateur n'est pas authentifier, pas d'acces au calendrier #}
                                         <ul>
                                             <li> <a href="{{path('demo')}}#calendar">Calendrier</a> </li>
-                                            <li> <a href="">Créer un créneau</a> </li>
+                                            <li> <a href="">Ajouter un créneau</a> </li>
                                         </ul>
-                                        {% else %}
-                                        {% endif %}
                                     </dd>
                                 </dl>
                                 <dl class="nav-item">
@@ -134,5 +130,25 @@
             </div>
         </footer>
         <!--fin block footer-->
+        <!--début block cookie RGPD-->
+        <!-- Cookie Consent by TermsFeed (https://www.TermsFeed.com) -->
+        <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
+        <script type="text/javascript" charset="UTF-8">
+            document.addEventListener('DOMContentLoaded', function () {
+                cookieconsent.run({
+                    "notice_banner_type":"headline",
+                    "consent_type":"express",
+                    "palette":"dark",
+                    "language":"fr",
+                    "page_load_consent_levels":["strictly-necessary"],
+                    "notice_banner_reject_button_hide":false,
+                    "preferences_center_close_button_hide":false,
+                    "page_refresh_confirmation_buttons":false,
+                    "open_preferences_center_selector":"#preference_cookies"});
+            });
+        </script>
+        <noscript>ePrivacy and GPDR Cookie Consent by <a href="https://www.TermsFeed.com/" rel="nofollow">TermsFeed Generator</a></noscript>
+        <!-- End Cookie Consent by TermsFeed (https://www.TermsFeed.com) -->
+        <!--fin block cookie RGPD-->
     </body>
 </html>
