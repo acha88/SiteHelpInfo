@@ -44,7 +44,7 @@
                     addEventButton: {
                         text: 'Ajouter un créneau',
                         click: function() {
-                            var dateStr = prompt('Entrer une date au format ANNEE-MOIS-JOUR');
+                            var dateStr = prompt('Entrer une date au format ANNEE-MOIS-JOUR', '2022-05-15');
                             var date = new Date(dateStr + 'T00:00:00');
                             /* ON AJOUTE 1 POUR AFFICHER LE CRENEAU SUR LA BONNE DATE */
                             date.setDate(date.getDate() + 1);
@@ -93,7 +93,7 @@
                         minute: '2-digit'
                     }
                     
-                    confirmation.innerHTML = '<div class="cardInfoDemo"><fieldset><h2>Récapitulatif</h2><label>Intitulé</label><textarea class="cardTitle" disabled>' + eventObj.title + '</textarea><div class="cardDate"><label>Le</label><textarea class="date" disabled>' + eventObj._instance.range.start.toLocaleDateString('fr-FR', options) + '</textarea></div><div class="cardDate"><label> De</label><textarea class="heures" disabled>' + eventObj._instance.range.start.toLocaleTimeString('fr-FR', fuseau) + '</textarea><br><label> A</label><textarea class="heures" disabled>'+ eventObj._instance.range.end.toLocaleTimeString('fr-FR', fuseau) + '</textarea></div><div class="cardDate"><h2>Vos coordonnées</h2><label class="labelCoord" for="">Votre email :</label><input type="email" name="email" id="email" placeholder="Votre email" required></div><button type="submit" class="btn btnCalendar btn-success">Confirmer</button></fieldset></div>';
+                    confirmation.innerHTML = '<div class="cardInfoDemo"><fieldset><h2>Récapitulatif</h2><textarea class="cardTitle" disabled>' + eventObj.title + '</textarea><div class="cardDate"><label>Le</label><textarea class="date" disabled>' + eventObj._instance.range.start.toLocaleDateString('fr-FR', options) + '</textarea></div><div class="cardDate"><label> De</label><textarea class="heures" disabled>' + eventObj._instance.range.start.toLocaleTimeString('fr-FR', fuseau) + '</textarea><br><label> A</label><textarea class="heures" disabled>'+ eventObj._instance.range.end.toLocaleTimeString('fr-FR', fuseau) + '</textarea></div><div class="cardDate"><h2>Vos coordonnées</h2><label class="labelCoord" for="">Votre email :</label><input type="email" name="email" id="email" placeholder="Votre email" required></div><button type="submit" class="btn btn-success btnCalendar">Confirmer</button></fieldset></div>';
                     info.jsEvent.preventDefault();
                 },
             });
