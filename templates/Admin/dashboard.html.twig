@@ -1,0 +1,23 @@
+{% extends '@EasyAdmin/layout.html.twig' %}
+ 
+{% block main %}
+
+<h1>Récapitulatif</h1>
+<div>
+    <h3>Vos utilisateurs</h3>
+    <p>Vous avez {{ users }} utilisateurs enregistrés.</p>
+    <p class="text-danger"> <span> ATTENTION SECURITE :</span> Pour ajouter un utilisateur, veuillez passer par le formulaire d'inscription en cliquant sur "Ajouter un utilisateur" et non pas depuis le bouton "ADD USER" de la page Utilisateurs. <br> L'inscription sera prise en compte mais le mot de passe ne sera pas hasher dans la BDD !</p>
+</div>
+<div>
+    <h3>Votre Solution GET-MS</h3>
+    <p>Vous avez {{ article }} écrans sur votre page Solution GET-MS.</p>
+</div>
+<div>
+    <h3>Vos rendez-vous</h3>
+    <p>Vous avez {{ planning }}  rendez-vous enregistrés.</p>
+</div>
+<div>
+    <p>Pour créer, modifier, supprimer l'une de ces catégories, veuillez vous rendre sur leur page dédiée.</p>
+</div>
+
+{% endblock %}

@@ -27,7 +27,8 @@ class SecurityController extends AbstractController
             $manager->persist($user);
             $manager->flush();
 
-            return $this->redirectToRoute('security_login');
+            $this->addFlash('success', "Le compte utilisateur a bien été créé.");
+            return $this->redirectToRoute('admin');
         }
         return $this->render('security/registration.html.twig', [
             'form' => $form->createView()

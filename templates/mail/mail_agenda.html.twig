@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <section class="bg-foncer mail">
+        <h3>Prendre un rendez-vous :</h3>
+        <p>Choisissez un créneau selon les dates proposées dans le calendrier ; si aucunes de ces dates ou heures ne vous conviens, sélectionner vos disponibilités ; notre équipe vous contactera pour la confirmation de celui-ci :</p>
+        <fieldset>
+            <div class="formLogin">
+                {{ form_start(form, {'action': path('mail'), 'method': 'POST'})}}
+                <div class="name">
+                    {{ form_row(form.description, {'label': 'Objet :', 'attr':{'placeholder': 'Démonstration logiciel GET-MS'}}) }}
+                </div>
+                <div class="date">
+                {{ form_row(form.date) }}
+                </div>
+                <div class="heures">
+                    {{ form_row(form.heure_debut) }}
+                </div>
+                <div class="heures">
+                    {{ form_row(form.heure_fin) }}
+                </div>
+                <div class="mail">
+                    {{ form_row(form.adresse_mail, {'label': 'Votre mail :', 'attr':{'placeholder': 'exemple@exemple.com'}}) }}
+                </div>
+                {{ form_rest(form) }}
+                <button type="submit" class="btn btn-success btnLog">Valider</button>
+            </div> 
+        </fieldset>
+    </section>   
+{% endblock body %}

@@ -31,9 +31,9 @@ footer {
     padding: 5%;
 }
 /* MENU */
-#logo {
-    height: 90px;
-    width: 90px;
+.logo {
+    height: 70px;
+    width: 70px;
     margin: 0 10vh;
 }
 #navId {
@@ -312,7 +312,7 @@ dl:hover dd {
     flex-direction: column;
     justify-content: center;
 }
-/* DEMO EN ETANT CONNECTER */
+/* DEMO */
 .demo {
     z-index: -1;
     display: flex;
@@ -380,15 +380,22 @@ textarea,
 .labelCoord {
     width: 250px;
 }
-
+.inputMail {
+    width: 100%;
+    padding: 0.5%;
+}
 .btnCalendar {
     margin: 25% 30%;
+}
+/* MAIL ENVOYER */
+.alert {
+    width: 80%;
 }
 /* PAGE ASSISTANCE */
 .btnAssist {
     margin: 3% 0;
 }
-/* LOGIN, REGISTRATION, LOGOUT */
+/* LOGIN, REGISTRATION, LOGOUT, AGENDA, MAIL */
 .formLogin {
     background-color: #7b8ac6;
     width: 30%;
@@ -462,13 +469,24 @@ label {
     }
     .divClient,
     .divRow,
+    .divSecurity,
     .sectionGrosTitre {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         text-align: justify;
     }
+    /* MENU */
+    .nav-link {
+        padding: 0;
+        margin: 0;
+    }
     /* LES IMAGES */
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
     .imgGrosTitre,
     .imgAssist,
     .imgArticle,
@@ -498,9 +516,13 @@ label {
         height: auto;
         width: 100%;
         font-size: 12px;
+        padding: 0;
     }
+    
     .ulNav,
     dd {
+        padding: 0;
+        margin: 1% auto;
         visibility: hidden;
     } 
     /* LES TITRES */

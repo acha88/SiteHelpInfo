@@ -29,7 +29,7 @@
             <nav id="navId" class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarColor03">
-                        <a class="navbar-brand"><img id="logo" src="{{ asset('images/logoHelpInfoArrondi.png') }}" alt="logo"></a>
+                        <a class="logoMedia navbar-brand"><img class="logo" src="{{ asset('images/logoHelpInfoArrondi.png') }}" alt="logo"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -71,7 +71,6 @@
                                     <dd>
                                         <ul class="ulNav">
                                             <li> <a href="{{path('demo')}}#calendar">Calendrier</a> </li>
-                                            <li> <a href="">Ajouter un créneau</a> </li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -89,7 +88,8 @@
                                             {% else %}
                                             <li class="aList me-sm-2">
                                                 <p> {{ app.user.username }} </p>
-                                                <p>Mon compte</p>
+                                                <a href="{{ path('admin') }}">Gérer</a>
+                                                <a href="">Mon compte</a>
                                                 <a class="my-2 my-sm-0" href="{{path('security_logout')}}">Déconnexion</a>
                                             </li>
                                            {% endif %}

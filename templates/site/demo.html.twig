@@ -3,23 +3,10 @@
 
 {% block body %}
     <section class="outWave">
-        <h3>Choississez le créneau de votre choix</h3>
+        <h3>Planning des démos</h3>
         <div class="demo">
-            <div id="cardCalendar" class="card bg-light mb-3">
-                <h5 class="card-header">Utilisation du calendrier</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Etape n°1</h5>
-                    <p class="card-text">Cliquer sur le créneau de votre choix dans le calendrier ;</p>
-                    <h5 class="card-title">Etape n°2</h5>
-                    <p class="card-text">Valider celui-ci dans le récapitulatif en indiquant votre adresse mail ;</p>
-                    <h5 class="card-title">Etape n°3</h5>
-                    <p class="card-text">Un email nous a été envoyé, notre équipe vous contactera dans les plus brefs délais afin de valider votre rendez-vous ;</p>
-                    <h5 class="card-title">Ajouter un créneau :</h5>
-                    <p class="card-text">Cliquer sur le bouton "ajouter un créneau" ; renseigner la date de votre choix au format <span>ANNEE-MOIS-JOUR</span>, afin que celle soit validée, cliquer sur ok pour l'ajouter au calendrier et suivez les instructions précédantes pour valider votre choix.</p>
-                </div>
-            </div>
             <div id="calendar"></div>
-            <form id="confirmation" action="" method="post"></form>
+            <div id="confirmation"></div>
         </div>    
     </section>
 {% endblock body %}
@@ -35,14 +22,12 @@
                 locale: 'fr-FR',
                 initialView: 'dayGridMonth',
                 headerToolbar: {
-                    left: 'prev,next,addEventButton',
+                    left: 'prev,next',
                     center: 'title',
                     right: 'dayGridMonth,timeGridDay'
                 },
-                initialDate: '2022-05-02',
                 customButtons: {
                     addEventButton: {
-                        text: 'Ajouter un créneau',
                         click: function() {
                             var dateStr = prompt('Entrer une date au format ANNEE-MOIS-JOUR', '2022-05-15');
                             var date = new Date(dateStr + 'T00:00:00');
@@ -93,7 +78,7 @@
                         minute: '2-digit'
                     }
                     
-                    confirmation.innerHTML = '<div class="cardInfoDemo"><fieldset><h2>Récapitulatif</h2><textarea class="cardTitle" disabled>' + eventObj.title + '</textarea><div class="cardDate"><label>Le</label><textarea class="date" disabled>' + eventObj._instance.range.start.toLocaleDateString('fr-FR', options) + '</textarea></div><div class="cardDate"><label> De</label><textarea class="heures" disabled>' + eventObj._instance.range.start.toLocaleTimeString('fr-FR', fuseau) + '</textarea><br><label> A</label><textarea class="heures" disabled>'+ eventObj._instance.range.end.toLocaleTimeString('fr-FR', fuseau) + '</textarea></div><div class="cardDate"><h2>Vos coordonnées</h2><label class="labelCoord" for="">Votre email :</label><input type="email" name="email" id="email" placeholder="Votre email" required></div><button type="submit" class="btn btn-success btnCalendar">Confirmer</button></fieldset></div>';
+                    confirmation.innerHTML = '<a href="{{path("mail")}}"><button class="btnMooc btn">Prendre RDV</button></a>';
                     info.jsEvent.preventDefault();
                 },
             });
