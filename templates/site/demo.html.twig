@@ -4,10 +4,10 @@
 {% block body %}
     <section class="outWave">
         <h3>Planning des démos</h3>
-        <div class="demo">
-            <div id="calendar"></div>
-            <div id="confirmation"></div>
-        </div>    
+        <div class="moocInfo">
+            <p>Merci de bien vouloir cliquer sur le créneau de votre choix et de remplir le formulaire ci-après ; Vous n'êtes pas disponible dans ces créneaux ?  Planifier votre rendez-vous : <a href="{{ path('mail') }}"> Cliquer ici !</a></p>
+        </div>
+        <div id="calendar"></div>  
     </section>
 {% endblock body %}
 
@@ -26,61 +26,22 @@
                     center: 'title',
                     right: 'dayGridMonth,timeGridDay'
                 },
-                customButtons: {
-                    addEventButton: {
-                        click: function() {
-                            var dateStr = prompt('Entrer une date au format ANNEE-MOIS-JOUR', '2022-05-15');
-                            var date = new Date(dateStr + 'T00:00:00');
-                            /* ON AJOUTE 1 POUR AFFICHER LE CRENEAU SUR LA BONNE DATE */
-                            date.setDate(date.getDate() + 1);
-                            if (!isNaN(date.valueOf())) {
-                                calendar.addEvent({
-                                    title: 'Ajout créneau',
-                                    start: date,
-                                    allDay: true
-                                });
-                                alert('Votre demande de créneau a été ajouté au calendrier, vous pouvez passer à l\'étape suivante');
-                                /* ON RETIRE 1 POUR POUVOIR STOCKER LA BONNE DATE EN BDD EN CAS DE BESOIN */
-                                date.setDate(date.getDate() - 1);
-                            } else {
-                                alert('La date n\'est pas valide');
-                            }
-                        }
-                    }
-                },
                 events: [
                     {
                         daysOfWeek: [ '3' ],
                         title: 'GET-MS',
                         startTime: '10:00:00',
                         endTime: '11:30:00',
-                        url: '{{path("demo")}}'
+                        url: '{{path("mail")}}'
                     },
                     {
                         daysOfWeek: [ '5' ],
                         title: 'GET-MS',
                         startTime: '14:00:00',
                         endTime: '15:30:00',
-                        url: '{{path("demo")}}'
+                        url: '{{path("mail")}}'
                     }
                 ],
-                eventClick: function(info) {
-
-                    var eventObj = info.event;
-                    var options= {
-                        day: '2-digit',
-                        month: 'long',
-                        year: 'numeric',
-                    };
-                    var fuseau= {
-                        timeZone: 'UTC',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                    }
-                    
-                    confirmation.innerHTML = '<a href="{{path("mail")}}"><button class="btnMooc btn">Prendre RDV</button></a>';
-                    info.jsEvent.preventDefault();
-                },
             });
             calendar.render();
           });

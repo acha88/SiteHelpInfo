@@ -1,22 +1,25 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <section class="bg-foncer">
-        <h3>Inscription</h3>
-        <!--formulaire d'inscription, seulement les admins sont autorisés-->
-        <div class="divSecurity">
-            {{ form_start(form) }}
-            <div class="name">
-                {{ form_row(form.username, {'label':'Votre identifiant :', 'attr':{'placeholder' : 'Votre identifiant'}}) }}
+    {# {% if is_granted('ROLE_ADMIN') %} #}
+        <section class="bg-foncer">
+            <h3>Inscription</h3>
+            <!--formulaire d'inscription, seulement les admins sont autorisés-->
+            <div class="divSecurity">
+                {{ form_start(form) }}
+                <div class="name">
+                    {{ form_row(form.username, {'label':'Votre identifiant :', 'attr':{'placeholder' : 'Votre identifiant'}}) }}
+                </div>
+                <div class="mail">
+                {{ form_row(form.email, {'label':'Votre email :', 'attr':{'placeholder' : 'exemple@exemple.com'}}) }}
+                </div>
+                <div class="password">
+                    {{ form_row(form.password, {'label':'Votre mot de passe :', 'attr':{'placeholder' : 'Votre mot de passe'}}) }}
+                </div>
+                {{ form_rest(form) }}
+                <button type="submit" class="btn btn-success btnLog">Valider</button>
             </div>
-            <div class="mail">
-            {{ form_row(form.email, {'label':'Votre email :', 'attr':{'placeholder' : 'exemple@exemple.com'}}) }}
-            </div>
-            <div class="password">
-                {{ form_row(form.password, {'label':'Votre mot de passe :', 'attr':{'placeholder' : 'Votre mot de passe'}}) }}
-            </div>
-            {{ form_rest(form) }}
-            <button type="submit" class="btn btn-success btnLog">Valider</button>
-        </div> 
-    </section>   
+            <button><a href="{{'admin'}}">Retour Administration</a></button> 
+        </section>   
+    {# {% endif %} #}
 {% endblock body %}

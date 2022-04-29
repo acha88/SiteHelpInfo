@@ -46,7 +46,7 @@ class MailController extends AbstractController
         // création du mail
         $email = new TemplatedEmail();
         $email->from(Address::create('exemple@exemple.com'))
-            ->to('mail@exemple.com')
+            ->to('stage@helpinfo.fr')
             ->subject('Demande de rendez-vous sur le site web')
             ->htmlTemplate('mail/_sendEmail.html.twig');
         // envoi du mail et confirmation   

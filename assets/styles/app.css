@@ -334,8 +334,8 @@ dl:hover dd {
 /* calendrier au milieu */
 #calendar {
     display: flex;
-    width: 100%;
-    margin: 2%;
+    width: 80%;
+    margin: 5% 8%;
     padding: 1%;
     font-size: 10px;
     font-weight: bold;
@@ -351,45 +351,18 @@ dl:hover dd {
 #calendar button {
     background-color: #7b8ac6;
 }
-/* recap de droite */
-#confirmation {
-    width: 40%;
-    display: flex;
-    margin: 2% 0;
-}
-.cardInfoDemo {
-    background-color: #7b8ac6;
-    text-align: center;
-    padding: 2%;
-    box-shadow: #aaa 10px 10px 5px;
-}
-textarea,
-.cardTitle {
-    vertical-align: middle;
-    width: 50%;
-    text-align: center;
-}
+/* formulaire rdv */
+
 .date,
 .heures {
     text-align: center;
     margin: 0 10% !important;
 }
-.coordonnees {
-    margin-top: 2%;
-}
-.labelCoord {
-    width: 250px;
-}
-.inputMail {
-    width: 100%;
-    padding: 0.5%;
-}
-.btnCalendar {
-    margin: 25% 30%;
-}
+
 /* MAIL ENVOYER */
 .alert {
-    width: 80%;
+    margin: 2% 30%;
+    width: 60%;
 }
 /* PAGE ASSISTANCE */
 .btnAssist {

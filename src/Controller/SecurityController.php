@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use App\Entity\User;
+use App\Entity\Utilisateur;
 use App\Form\RegistrationType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +17,7 @@ class SecurityController extends AbstractController
     */
     public function registration(Request $request, EntityManagerInterface $manager, UserPasswordHasherInterface $passwordHasher): Response
     {
-        $user = new User();
+        $user = new Utilisateur();
         $form = $this->createForm(RegistrationType::class, $user);
 
         $form->handleRequest($request);
@@ -38,7 +38,7 @@ class SecurityController extends AbstractController
      * @Route("/connexion", name="security_login")
      */
     public function login() {
-        return $this->render("security/login.html.twig");
+        return $this->render("security/login.html.twig", []);
     }
     /**
      *@Route("/deconnexion", name="security_logout")  
